@@ -1,16 +1,12 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import { NavDropdown, Form, FormControl, Button,Image} from 'react-bootstrap';
+import Image from 'react-bootstrap/Image';
 import "./styles.css"
 
 
 
 export default class navBar extends React.Component {
-    constructor(){
-        super();
-    }
-
     render() {
         return (
             <Navbar default >

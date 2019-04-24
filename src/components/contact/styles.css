@@ -1,13 +1,72 @@
 .default{
-    width: 100%;
+    width: 200%;
     height: 100%;
     padding: 0;
 }
 
 .home{
     background-color: white;
-    padding:0em;
     width: 100%;
     text-align: center;
     justify-content: center;
+}
+.header{
+    font-family: Tahoma;
+    font-size: 1.25em;
+    color: #4c4c4c;
+    padding: 2em 2em 1em 2em;
+}
+
+.form{
+    margin: 0em auto 0em auto;
+    width: 70%;
+}
+
+.formControl{
+    margin: 0.5em auto 0em auto;
+}
+
+.submit{
+    color: #f54f4f;
+    background-color: white;
+    border-radius: 3em;
+    padding: 0.5em 2em 0.5em 2em;
+    border-style: solid;
+    border-color: #f54f4f;
+    border-width: medium;
+    font-size: 1.15em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.contact-me{
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+    height: auto;
+    margin-top: 3em;
+}
+.contact-header{
+    color:  #f54f4f;
+    font-size: 1.1em;
+}
+.find-me{
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto ;
+    height: auto;
+    padding: 1em 1em 1em 1em;
+
+}
+.button-icon{
+    border-style: solid;
+    border-width: medium;
+    border-radius: 3em;
+    border-color: #f54f4f;
+    padding: 1.8em 1em 1em 1em;
+}
+
+.fa-icon-button{
+    color: #f54f4f;
+    margin-top: 1.1em;
 }
