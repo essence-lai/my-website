@@ -1,0 +1,18 @@
+nav.navbar, .navbar-default {
+    background-color: transparent !important;
+    margin: 0em;
+
+}
+
+.navbar-default {
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    width: 100%;
+}
+
+
+.main-logo{
+    width:  70%;
+    height: auto;
+}
