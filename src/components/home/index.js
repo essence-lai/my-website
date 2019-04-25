@@ -28,25 +28,23 @@ export default class Home extends React.Component{
         super();
         this.renderName = this.renderName.bind(this);
         this.renderAboutMe = this.renderAboutMe.bind(this);
-        this.renderProjects = this.renderProjects.bind(this);
         this.renderContactMe = this.renderContactMe.bind(this);
         this.state = {
             name: false,
             aboutMe: false,
-            projects: false,
             contactMe: false
         };
     }
 
     renderName(){
         if(!this.state.name) {
-            if(window.pageYOffset < 350){
+            if(window.pageYOffset < 300){
                 this.setState({name: true});
             }else{
                 setTimeout(this.renderName,10);
             }
         }else{
-            if(window.pageYOffset >= 350){
+            if(window.pageYOffset >= 300){
                 this.setState({name: false});
             }else{
                 setTimeout(this.renderName, 10);
@@ -58,13 +56,13 @@ export default class Home extends React.Component{
 
     renderAboutMe(){
         if(!this.state.aboutMe){
-            if((window.pageYOffset >= 350) && (window.pageYOffset <= 2000)){
+            if((window.pageYOffset >= 300) && (window.pageYOffset <= 1500)){
                 this.setState({aboutMe: true});
             }else{
                 setTimeout(this.renderAboutMe, 10);
             }
         }else{
-            if((window.pageYOffset < 350) || (window.pageYOffset > 2000) ){
+            if((window.pageYOffset < 300) || (window.pageYOffset > 1500) ){
                 this.setState({aboutMe: false});
             }else{
                 setTimeout(this.renderAboutMe, 10);
@@ -72,31 +70,15 @@ export default class Home extends React.Component{
         }
     }
 
-    renderProjects(){
-        if(!this.state.projects){
-            if(window.pageYOffset >= 1600){
-                this.setState({projects: true});
-            }else{
-                setTimeout(this.renderProjects, 10);
-            }
-        }else{
-            if(window.pageYOffset < 1600 ){
-                this.setState({projects: false});
-            }else{
-                setTimeout(this.renderProjects, 10);
-            }
-        }
-    }
-
     renderContactMe(){
         if(!this.state.contactMe){
-            if(window.pageYOffset >= 1900){
+            if(window.pageYOffset >= 1000){
                 this.setState({contactMe: true});
             }else{
                 setTimeout(this.renderContactMe, 10);
             }
         }else{
-            if(window.pageYOffset < 1900){
+            if(window.pageYOffset < 1000){
                 this.setState({contactMe: false});
             }else{
                 setTimeout(this.renderContactMe, 10);
@@ -209,7 +191,7 @@ export default class Home extends React.Component{
                                                     Mixologist
                                                 </h1>
                                                 <h1 className="skills-description">
-                                                    I value the complexity of spirits and enjoy concocting a good drink that will spark any conversation.
+                                                    I love concocting a good drink that will spark any conversation.
                                                 </h1>
                                             </Col>
                                         </Row>
@@ -318,6 +300,59 @@ export default class Home extends React.Component{
                                 </Transition>
                             </Container>            )}
                     </Transition>
+                </Container>
+                <Container className={"contact-me"}>
+                    {this.renderContactMe()}
+                    <Row className="find-me show-grid">
+                        <Transition in={this.state.contactMe} timeout={800}>
+                            {(state) => (
+                                <Col  style={{
+                                    ...defaultStyle,
+                                    ...transitionStyles[state]
+                                }}
+                                      className="column-small" xs={6} md={3}>
+                                    <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"></i></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.contactMe} timeout={600}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small" xs={6} md={3}>
+                                    <a className="button-icon" href="https://www.linkedin.com/in/essence-lai-978b50a8/"><i className="fab fa-linkedin fa-2x fa-icon-button"></i></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.contactMe} timeout={400}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small" xs={6} md={3}>
+                                    <a className="button-icon" href="https://www.facebook.com/herbal1"><i className="fab fa-facebook-square fa-2x fa-icon-button"></i></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.contactMe} timeout={200}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small"  xs={6} md={3}>
+                                    <a className="button-icon" href="https://www.instagram.com/elaimanning/"> <i className="fab fa-instagram fa-2x fa-icon-button"></i></a>
+                                </Col>
+                            )}
+                        </Transition>
+                    </Row>
+
                 </Container>
             </Container>
         )

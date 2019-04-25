@@ -1,5 +1,5 @@
 .default{
-    width: 100%;
+    width: auto;
     height: 100%;
     padding: 0;
 
@@ -7,7 +7,7 @@
 
 .home{
     padding:0em;
-    width: 100%;
+    width: auto;
 }
 /* MAIN **************************************************************/
 .main{
@@ -45,7 +45,7 @@
 
 .about-me{
     background-color:  #f54f4f;
-    width:100%;
+    width: auto;
     padding: 5em 5em 3em 5em;
     text-align: center;
 }
@@ -100,4 +100,38 @@
     color: #3b3b3b;
     line-height: 150%;
 
+}
+
+/* Contact Me **************************************************************/
+.contact-me{
+    width: 100%;
+    text-align: center;
+    height: 20em;
+    margin-top: 1em;
+    margin-bottom: 5em;
+
+}
+.contact-header{
+    color:  #f54f4f;
+    font-size: 1.1em;
+}
+.find-me{
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto ;
+    height: auto;
+    padding: 1em 1em 1em 1em;
+
+}
+.button-icon{
+    border-style: solid;
+    border-width: medium;
+    border-radius: 3em;
+    border-color: #f54f4f;
+    padding: 1.8em 1em 1em 1em;
+}
+
+.fa-icon-button{
+    color: #f54f4f;
+    margin-top: 1.1em;
 }
