@@ -38,13 +38,13 @@ export default class Home extends React.Component{
 
     renderName(){
         if(!this.state.name) {
-            if(window.pageYOffset < 300){
+            if(window.pageYOffset < 500){
                 this.setState({name: true});
             }else{
                 setTimeout(this.renderName,10);
             }
         }else{
-            if(window.pageYOffset >= 300){
+            if(window.pageYOffset >= 500){
                 this.setState({name: false});
             }else{
                 setTimeout(this.renderName, 10);
@@ -62,7 +62,7 @@ export default class Home extends React.Component{
                 setTimeout(this.renderAboutMe, 10);
             }
         }else{
-            if((window.pageYOffset < 300) || (window.pageYOffset > 1500) ){
+            if((window.pageYOffset < 300)){
                 this.setState({aboutMe: false});
             }else{
                 setTimeout(this.renderAboutMe, 10);
