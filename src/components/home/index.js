@@ -175,7 +175,7 @@ export default class Home extends React.Component{
                                                     Traveller
                                                 </h1>
                                                 <h1 className="skills-description">
-                                                    I plan to travel the world, experience different cultures and lifestyles. I value the problems people face, which encourages me to code solutions!
+                                                    I plan to travel the world, experience different cultures and lifestyles.
                                                 </h1>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -218,7 +218,7 @@ export default class Home extends React.Component{
                                                     Languages I speak:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Java, JavaScript, TypeScript, C++, Html ,Css
+                                                    Java, JavaScript, TypeScript, C++, Html, Css
                                                 </h5>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -288,7 +288,7 @@ export default class Home extends React.Component{
                                                     Penicillin<br/>
                                                     Orange Whip<br/>
                                                     Manhattan<br/>
-                                                    Hemingway daiquiri<br/>
+                                                    Hemingway Daiquiri<br/>
                                                     Negroni<br/>
                                                     Mint Julip<br/>
                                                     Cosmopolitan<br/>

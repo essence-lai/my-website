@@ -12,6 +12,7 @@
 /* MAIN **************************************************************/
 .main{
     background: url(./img/background.png ) no-repeat center bottom;
+    opacity: 0.8;
     width: 100%;
     background-color: white;
     height: 45em;
@@ -23,7 +24,7 @@
     font-family: Tahoma;
     font-weight: bold;
     font-size: 450%;
-    color: #3b3b3b;
+    color: #090909;
     padding-top: 1.25em;
 
 }
@@ -32,13 +33,13 @@
     font-family: Tahoma;
     font-weight: bold;
     font-size: 150%;
-    color: #3b3b3b;
+    color: #090909;
 }
 
 .main-description-sub{
     font-family: Tahoma;
     font-size: 120%;
-    color: #3b3b3b;
+    color: #090909;
 }
 
 /* ABOUT ME**************************************************************/
@@ -52,7 +53,7 @@
 
 .about-me-description{
     font-family: Tahoma;
-    font-size: 150%;
+    font-size: 120%;
     color: white;
     margin-left: auto;
     margin-right: auto;
