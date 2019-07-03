@@ -1,15 +1,18 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import Image from 'react-bootstrap/Image';
 import './styles.css'
 import Navbar from '../navBar/index';
 import Transition from 'react-transition-group/Transition';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGlobeAmericas, faCocktail, faCode} from '@fortawesome/free-solid-svg-icons'
+import { faGlobeAmericas, faCocktail, faCode, faFile} from '@fortawesome/free-solid-svg-icons'
 
-library.add(faGlobeAmericas, faCocktail,faCode);
+library.add(faGlobeAmericas, faCocktail,faCode,faFile);
 
 const duration = 1000;
 
@@ -28,12 +31,18 @@ export default class Home extends React.Component{
         super();
         this.renderName = this.renderName.bind(this);
         this.renderAboutMe = this.renderAboutMe.bind(this);
-        this.renderContactMe = this.renderContactMe.bind(this);
+        this.handleModal = this.handleModal.bind(this);
         this.state = {
             name: false,
             aboutMe: false,
-            contactMe: false
+            modal: false,
         };
+    }
+
+    handleModal (){
+        this.setState({
+            modal: !this.state.modal
+        })
     }
 
     renderName(){
@@ -66,22 +75,6 @@ export default class Home extends React.Component{
                 this.setState({aboutMe: false});
             }else{
                 setTimeout(this.renderAboutMe, 10);
-            }
-        }
-    }
-
-    renderContactMe(){
-        if(!this.state.contactMe){
-            if(window.pageYOffset >= 1000){
-                this.setState({contactMe: true});
-            }else{
-                setTimeout(this.renderContactMe, 10);
-            }
-        }else{
-            if(window.pageYOffset < 1000){
-                this.setState({contactMe: false});
-            }else{
-                setTimeout(this.renderContactMe, 10);
             }
         }
     }
@@ -121,6 +114,70 @@ export default class Home extends React.Component{
                                 className="main-description-sub">Learning Frameworks one cocktail at a time!</h4>
                         )}
                     </Transition>
+                    <Row className="find-me show-grid">
+                        <Transition in={this.state.name} timeout={1200}>
+                            {(state) => (
+                                <Col  style={{
+                                    ...defaultStyle,
+                                    ...transitionStyles[state]
+                                }}
+                                      className="column-small" xs={4} md={{span: 2, offset: 1}}>
+                                    <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"/></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.name} timeout={1000}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small" xs={4} md={2}>
+                                    <a className="button-icon" href="https://www.linkedin.com/in/essence-lai-978b50a8/"><i className="fab fa-linkedin fa-2x fa-icon-button"/></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.name} timeout={800}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small"  xs={4} md={2}>
+                                    <a className="button-icon" onClick={this.handleModal}>  <FontAwesomeIcon icon="file" className="fab fa-2x fa-icon-button" /></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Modal size="lg" centered show={this.state.modal} onHide={this.handleModal}>
+                            <Modal.Body><Image  className="resume-img" src={require("./img/ELResume-1.png")}/></Modal.Body>
+                        </Modal>
+                        <Transition in={this.state.name} timeout={600}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small" xs={6} md={2}>
+                                    <a className="button-icon" href="https://www.facebook.com/herbal1"><i className="fab fa-facebook-square fa-2x fa-icon-button"/></a>
+                                </Col>
+                            )}
+                        </Transition>
+                        <Transition in={this.state.name} timeout={400}>
+                            {(state) => (
+                                <Col
+                                    style={{
+                                        ...defaultStyle,
+                                        ...transitionStyles[state]
+                                    }}
+                                    className="column-small"  xs={6} md={2}>
+                                    <a className="button-icon" href="https://www.instagram.com/elaimanning/"> <i className="fab fa-instagram fa-2x fa-icon-button"/></a>
+                                </Col>
+                            )}
+                        </Transition>
+                    </Row>
                 </Container>
                 <Container className="about-me">
                     {this.renderAboutMe()}
@@ -300,59 +357,6 @@ export default class Home extends React.Component{
                                 </Transition>
                             </Container>            )}
                     </Transition>
-                </Container>
-                <Container className={"contact-me"}>
-                    {this.renderContactMe()}
-                    <Row className="find-me show-grid">
-                        <Transition in={this.state.contactMe} timeout={800}>
-                            {(state) => (
-                                <Col  style={{
-                                    ...defaultStyle,
-                                    ...transitionStyles[state]
-                                }}
-                                      className="column-small" xs={6} md={3}>
-                                    <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.contactMe} timeout={600}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small" xs={6} md={3}>
-                                    <a className="button-icon" href="https://www.linkedin.com/in/essence-lai-978b50a8/"><i className="fab fa-linkedin fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.contactMe} timeout={400}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small" xs={6} md={3}>
-                                    <a className="button-icon" href="https://www.facebook.com/herbal1"><i className="fab fa-facebook-square fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.contactMe} timeout={200}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small"  xs={6} md={3}>
-                                    <a className="button-icon" href="https://www.instagram.com/elaimanning/"> <i className="fab fa-instagram fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                    </Row>
-
                 </Container>
             </Container>
         )

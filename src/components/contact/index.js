@@ -66,7 +66,7 @@ export default class Contact extends React.Component{
                 <Container className={'home'}>
                     <Navbar route={"contact"}/>
                     {this.renderHeader()}
-                    <Transition in={this.state.header} timeout={200}>
+                    <Transition in={this.state.header} timeout={0}>
                         {(state) => (
                             <h1 style={{
                                 ...defaultStyle,
@@ -77,7 +77,7 @@ export default class Contact extends React.Component{
                             </h1>
                         )}
                     </Transition>
-                    <Transition in={this.state.header} timeout={800}>
+                    <Transition in={this.state.header} timeout={200}>
                         {(state) => (
                             <Form style={{...defaultStyle, ...transitionStyles[state]}}
                                   className={'form'}
@@ -124,7 +124,7 @@ export default class Contact extends React.Component{
                 <Container className={"contact-me"}>
                     {this.renderBottomBar()}
                     <Row className="find-me show-grid">
-                        <Transition in={this.state.bottomBar} timeout={1400}>
+                        <Transition in={this.state.bottomBar} timeout={400}>
                             {(state) => (
                                 <Col  style={{
                                     ...defaultStyle,
@@ -135,7 +135,7 @@ export default class Contact extends React.Component{
                                 </Col>
                             )}
                         </Transition>
-                        <Transition in={this.state.bottomBar} timeout={1200}>
+                        <Transition in={this.state.bottomBar} timeout={600}>
                             {(state) => (
                                 <Col
                                     style={{
@@ -147,7 +147,7 @@ export default class Contact extends React.Component{
                                 </Col>
                             )}
                         </Transition>
-                        <Transition in={this.state.bottomBar} timeout={1000}>
+                        <Transition in={this.state.bottomBar} timeout={800}>
                             {(state) => (
                                 <Col
                                     style={{
@@ -159,7 +159,7 @@ export default class Contact extends React.Component{
                                 </Col>
                             )}
                         </Transition>
-                        <Transition in={this.state.bottomBar} timeout={800}>
+                        <Transition in={this.state.bottomBar} timeout={1000}>
                             {(state) => (
                                 <Col
                                     style={{
