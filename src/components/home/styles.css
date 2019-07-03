@@ -12,10 +12,10 @@
 /* MAIN **************************************************************/
 .main{
     background: url(./img/background.png ) no-repeat center bottom;
-    opacity: 0.8;
+    opacity: 0.70;
     width: 100%;
     background-color: white;
-    height: 45em;
+    height: 55em;
     justify-content: center;
     text-align: center;
 }
@@ -24,7 +24,7 @@
     font-family: Tahoma;
     font-weight: bold;
     font-size: 450%;
-    color: #090909;
+    color: #000000;
     padding-top: 1.25em;
 
 }
@@ -33,13 +33,13 @@
     font-family: Tahoma;
     font-weight: bold;
     font-size: 150%;
-    color: #090909;
+    color: #000000;
 }
 
 .main-description-sub{
     font-family: Tahoma;
     font-size: 120%;
-    color: #090909;
+    color: #000000;
 }
 
 /* ABOUT ME**************************************************************/
@@ -125,14 +125,15 @@
 
 }
 .button-icon{
-    border-style: solid;
-    border-width: medium;
-    border-radius: 3em;
     border-color: #f54f4f;
-    padding: 1.8em 1em 1em 1em;
 }
 
 .fa-icon-button{
-    color: #f54f4f;
-    margin-top: 1.1em;
+   color: #f54f4f;
+}
+
+.resume-img{
+    padding: 2em 2em 2em 2em;
+    height: 100%;
+    width: 100%;
 }
