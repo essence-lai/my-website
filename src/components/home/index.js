@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Image from 'react-bootstrap/Image';
@@ -102,7 +101,7 @@ export default class Home extends React.Component{
                                 ...defaultStyle,
                                 ...transitionStyles[state]
                             }}
-                                className="main-description">Aspiring Software Engineer, Mixologist,  Adventurous Traveller</h4>
+                                className="main-description">Software Engineer, Mixologist,  Adventurous Traveller</h4>
                         )}
                     </Transition>
                     <Transition in={this.state.name} timeout={1200}>
@@ -151,7 +150,7 @@ export default class Home extends React.Component{
                             )}
                         </Transition>
                         <Modal size="lg" centered show={this.state.modal} onHide={this.handleModal}>
-                            <Modal.Body><Image  className="resume-img" src={require("./img/ELResume-1.png")}/></Modal.Body>
+                            <Modal.Body><Image  className="resume-img" src={require("./img/EssenceResume2-1.png")}/></Modal.Body>
                         </Modal>
                         <Transition in={this.state.name} timeout={600}>
                             {(state) => (
@@ -189,8 +188,9 @@ export default class Home extends React.Component{
                             }}
                                 className="about-me-description">
                                 Hi! I'm Essence (pronounced "Ee-sense),
-                                a junior developer with 2 years internship experience.
-                                Just recently graduated from the University of British Columbia and is actively seeking for new opportunities.</h1>
+                                a Junior Full Stack dDeveloper with 3 years of work experience.
+                                Always trying out new frameworks and seeking for new opportunities to make an impact in the world. <br/> <br/>
+                                Checkout my github for latest for my latest projects!</h1>
                         )}
                     </Transition>
                     <Transition in={this.state.aboutMe} timeout={800}>
@@ -267,7 +267,7 @@ export default class Home extends React.Component{
                                                     Next Stop:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Puerto vallarta
+                                                    Wherever the wind takes me!
                                                 </h5>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -275,7 +275,7 @@ export default class Home extends React.Component{
                                                     Languages I speak:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Java, JavaScript, TypeScript, C++, Html, Css
+                                                    Javascript, Java, Dart, Python, SQL, NoSQL, TypeScript, C++, Html, Css
                                                 </h5>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -302,6 +302,8 @@ export default class Home extends React.Component{
                                                     Places I have been to:
                                                 </h4>
                                                 <h5 className="header-description">
+                                                    Montreal<br/>
+                                                    Puerto Vallarta<br/>
                                                     Thailand<br/>
                                                     Vietnamn<br/>
                                                     Cambodia<br/>
@@ -321,11 +323,15 @@ export default class Home extends React.Component{
                                                     Dev Tools:
                                                 </h4>
                                                 <h5 className="header-description">
+                                                    Vue<br/>
+                                                    Flutter<br/>
                                                     React<br/>
                                                     React-Native<br/>
-                                                    SQL<br/>
+                                                    MongoDB<br/>
+                                                    PostGreSQL<br/>
                                                     Firebase<br/>
-                                                    Github<br/>
+                                                    Chai<br/>
+                                                    Git<br/>
                                                     Bitbucket<br/>
                                                     Trello<br/>
                                                     Asana<br/>
