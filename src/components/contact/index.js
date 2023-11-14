@@ -57,7 +57,7 @@ export default class Contact extends React.Component{
     }
 
     onChange = (e) => {
-      this.setState({ [e.target.name]: e.target.value });
+        this.setState({ [e.target.name]: e.target.value });
     };
 
     render(){
@@ -80,9 +80,9 @@ export default class Contact extends React.Component{
                     <Transition in={this.state.header} timeout={200}>
                         {(state) => (
                             <Form style={{...defaultStyle, ...transitionStyles[state]}}
-                                  className={'form'}
-                                  method={"POST"}
-                                  action={"https://formspree.io/essencelai@gmail.com"}
+                                    className={'form'}
+                                    method={"POST"}
+                                    action={"https://formspree.io/essencelai@gmail.com"}
                             >
                                 <Form.Control
                                     type="text"
@@ -130,7 +130,7 @@ export default class Contact extends React.Component{
                                     ...defaultStyle,
                                     ...transitionStyles[state]
                                 }}
-                                      className="column-small" xs={6} md={3}>
+                                    className="column-medium">
                                     <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"></i></a>
                                 </Col>
                             )}
@@ -142,32 +142,8 @@ export default class Contact extends React.Component{
                                         ...defaultStyle,
                                         ...transitionStyles[state]
                                     }}
-                                    className="column-small" xs={6} md={3}>
+                                    className="column-medium">
                                     <a className="button-icon" href="https://www.linkedin.com/in/essence-lai-978b50a8/"><i className="fab fa-linkedin fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.bottomBar} timeout={800}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small" xs={6} md={3}>
-                                    <a className="button-icon" href="https://www.facebook.com/herbal1"><i className="fab fa-facebook-square fa-2x fa-icon-button"></i></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.bottomBar} timeout={1000}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small"  xs={6} md={3}>
-                                    <a className="button-icon" href="https://www.instagram.com/elaimanning/"> <i className="fab fa-instagram fa-2x fa-icon-button"></i></a>
                                 </Col>
                             )}
                         </Transition>

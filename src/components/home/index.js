@@ -120,7 +120,7 @@ export default class Home extends React.Component{
                                     ...defaultStyle,
                                     ...transitionStyles[state]
                                 }}
-                                      className="column-small" xs={4} md={{span: 2, offset: 3}}>
+                                    className="column-small" xs={4} md={{span: 2, offset: 3}}>
                                     <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"/></a>
                                 </Col>
                             )}
@@ -150,7 +150,8 @@ export default class Home extends React.Component{
                             )}
                         </Transition>
                         <Modal size="lg" centered show={this.state.modal} onHide={this.handleModal}>
-                            <Modal.Body><Image  className="resume-img" src={require("./img/EssenceLaiResume-1.png")}/></Modal.Body>
+                            <Modal.Body><Image  className="resume-img" src={require("./img/EssenceLai-1.png")}/>
+                                        <Image  className="resume-img" src={require("./img/EssenceLai-2.png")}/></Modal.Body>
                         </Modal>
                     </Row>
                 </Container>
@@ -243,7 +244,7 @@ export default class Home extends React.Component{
                                                     Next Stop:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Wherever the wind takes me!
+                                                    Barcelona
                                                 </h5>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -251,7 +252,7 @@ export default class Home extends React.Component{
                                                     Languages I speak:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Javascript, Java, Dart, Python, SQL, NoSQL, TypeScript, C++, Html, Css
+                                                    Javascript, Python Java, YAML, Go, Dart, TypeScript, SQL, Latex, HTML/CSS
                                                 </h5>
                                             </Col>
                                             <Col xs={4} md={4}>
@@ -259,7 +260,7 @@ export default class Home extends React.Component{
                                                     My go to Cocktail:
                                                 </h4>
                                                 <h5 className="header-description">
-                                                    Old Fashioned
+                                                    Paloma
                                                 </h5>
                                             </Col>
                                         </Row>
@@ -271,13 +272,25 @@ export default class Home extends React.Component{
                                             ...defaultStyle,
                                             ...transitionStyles[state]
                                         }}
-                                              className="show-grid">
+                                            className="show-grid">
 
                                             <Col xs={4} md={4}>
                                                 <h4 className="header-title">
                                                     Places I have been to:
                                                 </h4>
                                                 <h5 className="header-description">
+                                                    Osaka <br/>
+                                                    Hakone <br/>
+                                                    Himeji <br/>
+                                                    Fukoaka <br/>
+                                                    Kyoto <br/>
+                                                    Tokyo <br/>
+                                                    Auckland <br/>
+                                                    Wellington <br/>
+                                                    Cabo Frio <br/>
+                                                    Rio de Janeiro<br/>
+                                                    Calgary<br/>
+                                                    Toronto<br/>
                                                     Montreal<br/>
                                                     Puerto Vallarta<br/>
                                                     Thailand<br/>
@@ -322,6 +335,7 @@ export default class Home extends React.Component{
                                                     My Favourites:
                                                 </h4>
                                                 <h5 className="header-description">
+                                                    Old Fashioned <br/>
                                                     Amaretto Sour<br/>
                                                     Bitter Summer<br/>
                                                     Penicillin<br/>
