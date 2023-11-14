@@ -101,7 +101,7 @@ export default class Home extends React.Component{
                                 ...defaultStyle,
                                 ...transitionStyles[state]
                             }}
-                                className="main-description">Software Engineer, Mixologist,  Adventurous Traveller</h4>
+                                className="main-description">Full Stack Developer, Mixologist,  Adventurous Traveller</h4>
                         )}
                     </Transition>
                     <Transition in={this.state.name} timeout={1200}>
@@ -120,7 +120,7 @@ export default class Home extends React.Component{
                                     ...defaultStyle,
                                     ...transitionStyles[state]
                                 }}
-                                      className="column-small" xs={4} md={{span: 2, offset: 1}}>
+                                      className="column-small" xs={4} md={{span: 2, offset: 3}}>
                                     <a className="button-icon" href="https://github.com/essence-lai"><i className="fab fa-github fa-2x fa-icon-button"/></a>
                                 </Col>
                             )}
@@ -150,32 +150,8 @@ export default class Home extends React.Component{
                             )}
                         </Transition>
                         <Modal size="lg" centered show={this.state.modal} onHide={this.handleModal}>
-                            <Modal.Body><Image  className="resume-img" src={require("./img/EssenceResume2-1.png")}/></Modal.Body>
+                            <Modal.Body><Image  className="resume-img" src={require("./img/EssenceLaiResume-1.png")}/></Modal.Body>
                         </Modal>
-                        <Transition in={this.state.name} timeout={600}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small" xs={6} md={2}>
-                                    <a className="button-icon" href="https://www.facebook.com/herbal1"><i className="fab fa-facebook-square fa-2x fa-icon-button"/></a>
-                                </Col>
-                            )}
-                        </Transition>
-                        <Transition in={this.state.name} timeout={400}>
-                            {(state) => (
-                                <Col
-                                    style={{
-                                        ...defaultStyle,
-                                        ...transitionStyles[state]
-                                    }}
-                                    className="column-small"  xs={6} md={2}>
-                                    <a className="button-icon" href="https://www.instagram.com/elaimanning/"> <i className="fab fa-instagram fa-2x fa-icon-button"/></a>
-                                </Col>
-                            )}
-                        </Transition>
                     </Row>
                 </Container>
                 <Container className="about-me">
@@ -188,7 +164,7 @@ export default class Home extends React.Component{
                             }}
                                 className="about-me-description">
                                 Hi! I'm Essence (pronounced "Ee-sense),
-                                a Junior Full Stack dDeveloper with 3 years of work experience.
+                                a Intermediate Full Stack dDeveloper with 3 years of work experience.
                                 Always trying out new frameworks and seeking for new opportunities to make an impact in the world. <br/> <br/>
                                 Checkout my github for latest for my latest projects!</h1>
                         )}
@@ -219,7 +195,7 @@ export default class Home extends React.Component{
                             <Container  style={{
                                 ...defaultStyle,
                                 ...transitionStyles[state]
-                            }}className="skill-grid">
+                            }} className="skill-grid">
                                 <Transition in={this.state.aboutMe} timeout={1400}>
                                     {(state) => (
                                         <Row style={{
